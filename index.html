@@ -10,18 +10,24 @@
 </head>
 <body>
     <!--Navbar-->
-    <header>
-        <a href="#home"><img src="images/Close Division W.png" alt="Close Division Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dark-mode-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></li>
-            </ul>
-        </nav>
-    </header>
+    <nav id="navbar">
+        <a href="index.html" class="logo"><img src="images\Close Division W.png" alt="Close Division"></a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li class="dark-mode-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></li>
+        </ul>
+
+    </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -30,37 +36,58 @@
     </section>
 
     <!--services section-->
-    <section id="services">
-        <div class="container-lo">
+    <section id="what-we-offer">
+        <div class="container">
             <h2>What We Offer</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Custom Web Design/Development</h3>
-                    <p>Unique and visually appealing responsive designs tailored to your brand's identity and needs.</p>
+            <p>At Close Division, we specialize in creating stunning, functional websites that captivate and convert. 
+                Our comprehensive suite of services ensures that every aspect of your online presence is polished and professional, 
+                from initial design to ongoing support. Discover how we can elevate your brand and drive your business forward with 
+                our tailored solutions.
+            </p>
+            <div class="services-grid">
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Design</h3>
+                    <p><strong>We create visually appealing and user-friendly websites</strong> that perfectly repreent your brand, 
+                        ensuring an excellent user experience and engagement.
+                    </p>
                 </div>
-                <div class="service-item">
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p><strong>We offer complete e-commerce website development</strong> to help you set up your online store, 
+                        with all the features you need to start selling products online.
+                    </p>
+                </div>
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-search"></i></div>
                     <h3>SEO Optimization</h3>
-                    <p>Improve your website's visibility on search engines with our SEO expertise.</p>
+                    <p><strong>Optimize your website for search engines</strong> with our SEO services. We help emprove your site's 
+                        ranking, driving more organic taffic to your business.
+                    </p>
                 </div>
-                <div class="service-item">
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-file-alt"></i></div>
                     <h3>Content Management</h3>
-                    <p>Easy-to-use CMS solutions for managing and updating your website content efficiently.</p>
+                    <p><strong>Manage your website content effortlessly</strong> with our content management solutions, tailored to your specific needs and goals.
+                    </p>
                 </div>
-                <div class="service-item">
-                    <h3>Website Management</h3>
-                    <p>Regular updates and technical support to keep your website running smoothly.</p>
-                </div>
-                <div class="service-item">
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p>Strategies to enhance your online presence and enagage with your target audience effectively.</p>
+                    <p><strong>Boost your online presence with our comprehensive digital marketing strategies,</strong> including social media management,
+                        PPC advertising, and email marketing, tailoured to grow your audience and increase conversions.
+                    </p>
                 </div>
-                <div class="service-item">
-                    <h3>Hosting</h3>
-                    <p>Reliable and secure hosting solutions to ensure your website is always accessible and performs optimally.</p>
+                <div class="service">
+                    <div class="Icon"><i class="fas fa-server"></i></div>
+                    <h3>Hosting & Maintenance</h3>
+                    <p><strong>Reliable hosting solutions with regular maintenance</strong> to keep your website secure, up-to-date, and running smoothly all the time.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+        
 
     <!--Package Section-->
     <section id="packages">
