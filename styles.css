@@ -11,62 +11,89 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-/*Header and Nav*/
-header {
+/*Nav*/
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    position: fixed;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.363);
+    position: absolute;
     width: 100%;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: background-color 0.3s;
-    z-index: 1000;
+    z-index: 10;
 }
 
-header img {
-    width: 55px;
+nav .logo img {
+    height: 50px;
+}
+
+nav .hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
-nav ul {
-    display: flex;
-    gap: 30px;
+nav .hamburger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
 }
 
-nav ul li {
+nav .nav-list {
     list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
-nav ul li a {
+nav .nav-list li a {
     text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #333;
+    font-size: 1rem;
 }
 
-nav ul li a:hover {
-    color: #00bfff;
+nav .nav-list li a:hover {
+    color: #007bff;
 }
 
-.dark-mode nav ul li a:hover {
-    color: #00bfff;
+body.dark-mode nav {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dark-mode-toggle {
-    cursor: pointer;
-    font-size: 20px;
-    transition: color 0.3s;
+body.dark-mode nav .nav-list li a {
+    color: #fff;
 }
 
-.dark-mode-toggle:hover {
-    color: #00bfff;
+body.dark-mode nav .nav-list li a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    nav .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    nav .nav-list.active {
+        display: flex;
+    }
+
+    nav .nav-list li {
+        margin: 1rem 0;
+    }
+
+    nav .hamburger-menu {
+        display: block;
+    }
 }
 
 /*Hero Section*/
@@ -105,61 +132,83 @@ nav ul li a:hover {
 }
 
 /*Service Section*/
-.container-lo {
-    width: 80%;
-    margin: 0 auto;
+#what-we-offer {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#what-we-offer h2 {
     text-align: center;
-}
-
-#services {
-    background-color: #f4f4f4;
-    color: #000;
-    padding-top: 0;
-    padding: 50px 0;
-    margin-top: 0;
-}
-
-body.dark-mode #services {
-    background-color: #222222;
-    color: #fff;
-    padding-top: 0;
-}
-
-.service-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.dark-mode #services {
-    background-color: #222222;
-    color: #ffffff;
-}
-
-.service-item {
-    background-color: #fff;
-    color: #000;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 15px;
-    width: 30%;
-    box-sizing: border-box;
-}
-
-body.dark-mode .service-item {
-    background-color: #555;
-    color: #fff;
-}
-
-h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    padding: 20px;
+    margin-bottom: 1rem;
 }
 
-.service-item p {
-    font-size: 1em;
+#what-we-offer p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service .icon {
+    font-size: 7rem;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.service h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+}
+
+body.dark-mode #what-we-offer {
+    background-color: #333;
+}
+
+body.dark-mode .service {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .service p, body.dark-mode .service h3 {
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(1fr);
+    }
 }
 
 /*Packages Section*/
