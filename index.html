@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Close Division - Web Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#home"><img src="images/Close Division W.png" alt="Close Division Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dark-mode-toggle" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>This Website is currently under construction!!!</h1>
+        </div>
+    </section>
+
+    <!--services section-->
+    <section id="services">
+        <div class="container-lo">
+            <h2>What We Offer</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Custom Web Design/Development</h3>
+                    <p>Unique and visually appealing responsive designs tailored to your brand's identity and needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility on search engines with our SEO expertise.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Content Management</h3>
+                    <p>Easy-to-use CMS solutions for managing and updating your website content efficiently.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Website Management</h3>
+                    <p>Regular updates and technical support to keep your website running smoothly.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Digital Marketing</h3>
+                    <p>Strategies to enhance your online presence and enagage with your target audience effectively.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Hosting</h3>
+                    <p>Reliable and secure hosting solutions to ensure your website is always accessible and performs optimally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Package Section-->
+    <section id="packages">
+        <div class="container">
+            <h2>Our Packages</h2>
+
+            <!--Toggle Switch for fee type-->
+            <div class="fee-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="feeTypeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="fee-type-label">Monthly Subscription</span>
+            </div>
+
+            <div class="package-list">
+                <!--Basic Package-->
+                <div class="package-item">
+                    <div class="package-icon">
+                        <img src="easy.gif" alt="Basic Package Icon">
+                    </div>
+                    <h3>Basic Package</h3>
+                    <p>Perfect for small businesses or personal websites.</p>
+                    <ul>
+                        <li>Custom Web Design</li>
+                        <li>Responsive Design</li>
+                        <li>Basic SEO Optimization</li>
+                        <li>1 Month Free Maintenance</li>
+                        <li>Basic Hosting (10GB Storage)</li>
+                        <li>1 Domain Name Purchase (.co.za)</li>
+                    </ul>
+                    <div class="price" data-monthly="R350/month" data-once="From R1200">Price: From R1200</div>
+                    <button class="btn">Choose Basic</button>
+                </div>
+
+                <!--Standard Package-->
+                <div class="package-item">
+                    <div class="package-icon">
+                        <img src="standard.gif" alt="Standard Package Icon">
+                    </div>
+                    <h3>Standard Package</h3>
+                    <p>Ideal for growing businesses with more advanced needs.</p>
+                    <ul>
+                        <li>Custom Web Design</li>
+                        <li>Responsive Design</li>
+                        <li>Advanced SEO Optimization</li>
+                        <li>Content Management System</li>
+                        <li>3 Months Free Maintenance</li>
+                        <li>Standard Hosting (50GB Storage)</li>
+                        <li>3 Domain Name Purchases (.co.za)</li>
+                    </ul>
+                    <div class="price" data-monthly="R500/month" data-once="From R1700">Price: From R1700</div>
+                    <button class="btn">Choose Standard</button>
+                </div>
+
+                <!--Premium Package-->
+                <div class="package-item">
+                    <div class="package-icon">
+                        <img src="premium.gif" alt="Premium Package Icon">
+                    </div>
+                    <h3>Premium Package</h3>
+                    <p>Best for businesses needing a full range of services.</p>
+                    <ul>
+                        <li>All Standard Services</li>
+                        <li>Digital Marketing</li>
+                        <li>6 Months Free Maintenance</li>
+                        <li>Priority Support</li>
+                        <li>Premium Hosting (Unlimited Storage, 5 Domains)</li>
+                        <li>5 Domain Name Purchases (.co.za or .com)</li>
+                        <li>Premium E-commerce Setup (Shopify)</li>
+                    </ul>
+                    <div class="price" data-monthly="R750/month" data-once="From R2300">Price: From R2300</div>
+                    <button class="btn">Choose Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
