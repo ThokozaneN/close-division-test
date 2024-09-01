@@ -71,30 +71,35 @@ body.dark-mode nav .nav-list li a:hover {
 }
 
 @media (max-width: 768px) {
-    nav .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: rgba(255, 255, 255, 0.9);
-        width: 200px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+  nav .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 9;
+  }
 
-    nav .nav-list.active {
-        display: flex;
-    }
+  nav .nav-list.active {
+      display: flex; 
+  }
 
-    nav .nav-list li {
-        margin: 1rem 0;
-    }
+  nav .nav-list li {
+      margin: 1rem 0;
+      text-align: center;
+  }
 
-    nav .hamburger-menu {
-        display: block;
-    }
+  nav .hamburger-menu {
+      display: block;
+      z-index: 10;
+  }
 }
+
 
 /*Hero Section*/
 .hero {
