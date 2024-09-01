@@ -70,3 +70,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navList = document.querySelector('.nav-list');
+
+  hamburgerMenu.addEventListener('click', function () {
+      navList.classList.toggle('active'); // Toggle the 'active' class
+  });
+
+  // Optional: Close menu when a link is clicked
+  navList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+          navList.classList.remove('active'); // Hide menu after clicking a link
+      });
+  });
+});
+
