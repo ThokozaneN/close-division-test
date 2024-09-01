@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.querySelector('.dark-mode-toggle');
   const heroSection = document.querySelector('.hero');
   const packageItems = document.querySelectorAll('.package-item');
+  const serviceIcons = document.querySelectorAll('.service-icon');
   const body = document.body;
 
   darkModeToggle.addEventListener('click', function () {
@@ -21,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Switch hero section images based on mode
       if (body.classList.contains('dark-mode')) {
           heroSection.style.backgroundImage = "url('laptop-with-blank-screen-table-dark-office-with-night-city-view.jpg')";
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for light mode
+          darkModeToggle.querySelector('img').src = 'moon-unscreen.gif'; // Dark mode GIF
       } else {
           heroSection.style.backgroundImage = "url('workplace-with-computer-coffee-cup-modern-office-3d-rendering.jpg')";
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for dark mode
+          darkModeToggle.querySelector('img').src = 'sun-unscreen.gif'; // Light mode GIF
       }
 
       // Switch package items' styles based on mode
@@ -38,12 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       });
 
-      // Update service icons based on dark mode
+      // Switch service icons based on mode
       switchIconsToDarkMode(body.classList.contains('dark-mode'));
   });
-
-  // Select the icon image elements
-  const serviceIcons = document.querySelectorAll(".service-icon");
 
   // Function to switch icon images
   function switchIconsToDarkMode(isDarkMode) {
@@ -59,25 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Price toggle between monthly and once-off fees
-  const priceToggle = document.getElementById('price-toggle');
-  const prices = document.querySelectorAll('.price');
+  const feeToggle = document.getElementById('feeTypeToggle');
+    const prices = document.querySelectorAll('.price');
 
-  // Event listener for the price toggle
-  priceToggle.addEventListener('change', function () {
-      updatePrices(priceToggle.checked);
-  });
-
-  // Function to update prices
-  function updatePrices(isMonthly) {
-      prices.forEach(price => {
-          if (isMonthly) {
-              price.textContent = ` ${price.getAttribute('data-monthly')}`; // Monthly price
-          } else {
-              price.textContent = ` ${price.getAttribute('data-once')}`; // Once-off price
-          }
-      });
-  }
-
-  // Initialize prices based on the toggle state on page load
-  updatePrices(priceToggle.checked);
+    feeToggle.addEventListener('change', function () {
+        prices.forEach(price => {
+            if (feeToggle.checked) {
+                price.textContent = ` ${price.getAttribute('data-monthly')}`; // Monthly price
+            } else {
+                price.textContent = ` ${price.getAttribute('data-once')}`; // Once-off price
+            }
+        });
+    });
 });
