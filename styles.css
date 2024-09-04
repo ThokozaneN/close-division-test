@@ -138,12 +138,12 @@ body.dark-mode nav .nav-list li a:hover {
 
 .hero-content h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.2;
 }
 
 .highlight {
-  color: #007bff;
+  color: #3e9bff;
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
