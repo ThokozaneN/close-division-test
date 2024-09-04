@@ -72,20 +72,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navList = document.querySelector('.nav-list');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navList = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-list li a');
 
-  hamburgerMenu.addEventListener('click', function () {
-      navList.classList.toggle('active'); // Toggle the 'active' class
-  });
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
 
-  // Optional: Close menu when a link is clicked
-  navList.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function () {
-          navList.classList.remove('active'); // Hide menu after clicking a link
-      });
-  });
+    // Close the menu if clicked outside
+    document.addEventListener('click', function (event) {
+        if (!navList.contains(event.target) && !hamburger.contains(event.target)) {
+            navList.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Close the menu when a section is selected
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navList.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
 });
+
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > document.querySelector('.hero').offsetHeight) {
@@ -112,4 +124,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(changeText, interval);
 });
-
