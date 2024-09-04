@@ -87,3 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > document.querySelector('.hero').offsetHeight) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  });
+
