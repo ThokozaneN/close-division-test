@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('DOMContentLoaded', function() {
     const highlight = document.querySelector('.highlight');
-    const words = ['solutions.', 'innovations.', 'journey.', 'outcomes.', 'successes.'];
+    const words = ['solutions.', 'innovations.', 'journeys.', 'outcomes.', 'successes.'];
     let currentIndex = 0;
     const interval = 2000; // Duration of each word display in milliseconds
 
