@@ -95,3 +95,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const highlight = document.querySelector('.highlight');
+    const words = ['solutions.', 'innovations.', 'advancements.', 'outcomes.', 'successes.'];
+    let currentIndex = 0;
+    const interval = 2000; // Duration of each word display in milliseconds
+
+    function changeText() {
+        highlight.style.opacity = 0;
+        setTimeout(function() {
+            highlight.textContent = words[currentIndex];
+            highlight.style.opacity = 1;
+            currentIndex = (currentIndex + 1) % words.length;
+        }, 500); // Match with CSS transition duration
+    }
+
+    setInterval(changeText, interval);
+});
+
