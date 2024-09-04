@@ -17,11 +17,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.363);
-    position: absolute;
+    background-color: rgba(255, 255, 255, 0.418);
+    position: sticky;
     width: 100%;
     top: 0;
-    z-index: 10;
+    z-index: 1;
 }
 
 nav .logo img {
@@ -72,7 +72,7 @@ body.dark-mode nav .nav-list li a:hover {
 
 @media (max-width: 768px) {
   nav .nav-list {
-      display: none;
+      display: none; /* Hide the menu by default */
       flex-direction: column;
       position: absolute;
       top: 60px;
@@ -237,7 +237,6 @@ body.dark-mode nav .nav-list li a:hover {
       grid-template-columns: 1fr;
   }
 }
-
 
 /*Packages Section*/
 #packages {
