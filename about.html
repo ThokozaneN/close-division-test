@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Close Division</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.418);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+body.dark-mode .hamburger-menu .line {
+  background-color: #fff;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode nav {
+  background-color: rgba(131, 131, 131, 0.712);
+}
+
+body.dark-mode nav .hamburger-menu .line {
+  background-color: #fff;
+}
+
+nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+nav .nav-list li a {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav .nav-list li a:hover {
+  color: #007bff;
+}
+
+body.dark-mode nav .nav-list li a {
+  color: #ffffff;
+}
+
+body.dark-mode nav .nav-list li a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  nav .nav-list {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+  }
+
+  nav .nav-list.active {
+    display: flex; 
+  }
+
+  nav .nav-list li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  nav .hamburger-menu {
+    display: block;
+    z-index: 10;
+  }
+
+  body.dark-mode .nav-list {
+    background-color: #555555e5;
+  }
+}
+
+    /* About Section */
+    .about-page {
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #000000;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    body.dark-mode h1 {
+        color: #fff;
+    }
+
+    .about-text {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+
+    .about-text span {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .about-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin: 40px 0;
+    }
+
+    .about-logos img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+      .about-logos {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      h1 {
+        font-size: 3rem;
+      }
+
+      .about-text {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="index.html" class="logo"><img src="images\Close Division B.png" alt="Close Division"></a>
+    <button class="hamburger-menu" aria-label="Toggle navigation">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <ul class="nav-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#what-we-offer">SOLUTIONS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dark-mode-toggle" onclick="toggleDarkMode()"><img id="dark-mode-toggle-img" src="sun-unscreen.gif" alt="Dark Mode Toggle"></li>
+    </ul>
+</nav>
+
+  <!-- About Section -->
+  <section class="about-page">
+    <h1>Close Division</h1>
+    
+    <div class="about-text">
+      <p>
+        <span>Close Division</span> is a cutting-edge web design agency that strives to provide the best in digital experiences. 
+        Our passion for <span>technology</span> and innovation drives us to create <span>modern</span>, stunning, and highly functional websites for businesses of all sizes. 
+        We believe that <span>every pixel counts</span>, and our focus is on delivering <span>exceptional quality</span> in every project.
+      </p>
+    </div>
+
+    <div class="about-logos">
+      <!-- Main Logo Image -->
+      <div class="main-logo">
+        <img src="images/Close Division Black.jpg" alt="Close Division Main Logo">
+      </div>
+
+      <!-- Icon Logo Image -->
+      <div class="icon-logo">
+        <img src="images\Close Division B.png" alt="Close Division Icon Logo">
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p>
+        The <span>main logo</span> represents our full brand identity, symbolizing creativity, precision, and trust. Our 
+        <span>icon logo</span> is a simplified version designed for versatility, used across digital platforms to maintain our strong presence.
+      </p>
+      <p>
+        Our goal is to deliver high-conversion designs, focusing on <span>AI-powered personalization</span>, <span>3D interactive elements</span>, and <span>ultra-secure</span> web solutions.
+        Join us on this exciting journey and let’s build something amazing together.
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
